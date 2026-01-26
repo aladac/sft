@@ -8,7 +8,7 @@ from pathlib import Path
 
 def main():
     project_dir = Path(__file__).parent
-    main_file = project_dir / "sft_get.py"
+    main_file = project_dir / "tensors.py"
     output_dir = project_dir / "dist"
 
     output_dir.mkdir(exist_ok=True)
@@ -20,7 +20,7 @@ def main():
         "--standalone",
         "--onefile",
         f"--output-dir={output_dir}",
-        "--output-filename=sft-get",
+        "--output-filename=sft",
         "--assume-yes-for-downloads",
         "--remove-output",
         # Include required packages
@@ -32,7 +32,7 @@ def main():
 
     print(f"Building with command:\n{' '.join(cmd)}\n")
     subprocess.run(cmd, check=True)
-    print(f"\nBuild complete! Binary at: {output_dir / 'sft-get'}")
+    print(f"\nBuild complete! Binary at: {output_dir / 'sft'}")
 
 
 if __name__ == "__main__":

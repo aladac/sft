@@ -28,7 +28,7 @@ def main() -> int:
             ["uv", "run", "ruff", "check", ".", *(["--fix"] if fix_mode else [])],
             "Ruff Lint",
         ),
-        (["uv", "run", "mypy", "sft_get.py"], "Mypy"),
+        (["uv", "run", "mypy", "tensors.py"], "Mypy"),
     ]
 
     # Fix the format check command
