@@ -48,6 +48,7 @@ select = [
     "RUF",    # ruff-specific
 ]
 ignore = [
+    "PLR0911",  # too many return statements
     "PLR0913",  # too many arguments
     "PLR2004",  # magic value comparison
 ]
